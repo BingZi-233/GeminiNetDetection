@@ -1,19 +1,19 @@
-# Building
+# 双子星·网络检测
 
-* [Gradle](https://gradle.org/) - Dependency Management
+> 作者：BingZi-233（冰子）
 
-The GradleWrapper in included in this project.
+### 项目功能介绍
 
-**Windows:**
+- 本插件可以在网络出现问题的时候
+- 自动执行指定的命令来协助管理员
+- 进行数据保存
 
-```
-gradlew.bat clean build
-```
+### 已具有功能
 
-**macOS/Linux:**
+- [x] 服务器网络检测
+- [x] 故障时执行指定命令组
 
-```
-./gradlew clean build
-```
+### 额外许可证内容
 
-Build artifacts should be found in `./build/libs` folder.
+- 不可商用
+- 二次修改后需要公开源代码并注明原作者
