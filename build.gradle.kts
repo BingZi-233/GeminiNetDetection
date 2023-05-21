@@ -6,6 +6,11 @@ plugins {
 }
 
 taboolib {
+    description {
+        contributors {
+            name("BingZi-233")
+        }
+    }
     install("common")
     install("common-5")
     install("module-kether")
