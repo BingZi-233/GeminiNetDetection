@@ -1,0 +1,8 @@
+# 检测网络链接的目标IP
+ip: "180.76.76.76"
+# 出现网络故障时执行的命令
+# 相关命令请参考：https://kether.tabooproject.org
+command:
+  # 你基本不需要修改这个样式
+  # 你只需要替换save-all即可执行你想执行的命令
+  - "command 'save-all' as console"
