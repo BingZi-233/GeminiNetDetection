@@ -19,7 +19,10 @@ object ConditionalCommandsPerformTasks {
     fun detect() {
         submit(async = true, delay = 20L * 30, period = 20L * 30) {
             try {
-                val process = Runtime.getRuntime().exec("ping $ipAddress") // 执行ping命令
+                val process = System.getProperty("os.name").toLowerCase().let { // 执行ping命令
+                    if(it.contains("win")) Runtime.getRuntime().exec("ping $ipAddress")
+                    else Runtime.getRuntime().exec("ping -c 4 $ipAddress")
+                }
                 val exitCode = process.waitFor() // 等待进程结束并获取退出码
                 if (exitCode == 0) {
                     if (networkStatusIndicator.not()) {
